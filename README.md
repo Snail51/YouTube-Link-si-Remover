@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The included [AutoHotKey](https://www.autohotkey.com/) script and executible listens for whenever the contents of the clipboard are modified, and removes the `si` parameter. Checks are in place to ensure that this only happens when it is certain that you have copied a YouTube link in this format.
+The included [AutoHotKey](https://www.autohotkey.com/) script and executable listens for whenever the contents of the clipboard are modified, and removes the `si` parameter. Checks are in place to ensure that this only happens when it is certain that you have copied a YouTube link in this format.
 
 ## Background
 
@@ -12,9 +12,9 @@ When explicitly sharing a YouTube video to as "copy link", it gets converted in 
 
 This makes the link shorter and easier to share.
 
-However, YouTube also adds a secret "si" parameter to the link to enable better tracking. In reality when you copy it will look more like `https://youtu.be/dQw4w9WgXcQ?si=xq9Jxn4vvkZXiD5q`.
+However, YouTube also adds a secret "si" parameter to the link to enable better tracking. In reality, when you copy it will look more like `https://youtu.be/dQw4w9WgXcQ?si=xq9Jxn4vvkZXiD5q`.
 
-This behavior is undesireable due to privacy reasons as well as arbitrarilly increasing the length of the link (which this share feature is supposed to prevent).
+This behavior is undesirable due to privacy reasons as well as arbitrarily increasing the length of the link (which this share feature is supposed to prevent).
 
 ## Installation
 
@@ -25,3 +25,9 @@ This behavior is undesireable due to privacy reasons as well as arbitrarilly inc
 
 Create a **SHORTCUT** to the `.exe` file and place that shortcut in `C:\Users\YOURNAME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`.
 You can also get to this location by searching "run" in the task bar and typing in `shell:startup`.
+
+## Additional Considerations
+
+- The script makes sure that the contents of your clipboard are text before modifying its contents.
+- The script makes sure that your clipboard starts with "[https://youtu.be/<VIDEO_ID>](https://youtube.com)" before modifying its contents.
+- The script properly preserves other parameters that may be present, such as linked timestamps (https://youtu.be/dQw4w9WgXcQ?t=21).
