@@ -18,7 +18,7 @@ This behavior is undesirable due to privacy reasons as well as arbitrarily incre
 
 ## Installation
 
-1. If on Windows, install and run the included `YouTubeNoSI.exe`. If this works, no further setup is required.
+1. If on Windows, download and run the included `YouTubeNoSI.exe`. If this works, no further setup is required.
 2. If not on Windows, or the included `YouTubeNoSI.exe` does not work, download [AutoHotKey](https://www.autohotkey.com/) and compile the script from its included source (`YouTubeNoSI.ahk`). Be sure to use version 1 of the AHK scripting language for this, **AHK V2+ WILL NOT WORK**. (I am using AHK `v1.1.37.01b`)
 
 ## Run Automatically at Computer Startup (Windows)
